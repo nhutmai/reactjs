@@ -2,22 +2,38 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const age='18';
+  const  ismale=true;
+  const student = {
+    name:'mai minh nhut',
+    born:'2000'
+  };
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-         我是 mai minh nhut 
-         你好！ 123
+        mai minh nhut 
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>{age}</p>
+        {ismale? <p>male</p>: <p>female</p>}
+        {ismale&&<p>male</p>}
+        {!ismale&&<p>female</p>}
+        {ismale&&
+          <div>
+            <p>female</p> 
+            <p>nam</p> 
+            <p>female</p> 
+          </div>
+        }     
+        {ismale&&
+          <>
+            <p>female</p> 
+            <p>namm</p> 
+            <p>female</p> 
+          </>
+        }     
+        {student.name}
       </header>
     </div>
   );
